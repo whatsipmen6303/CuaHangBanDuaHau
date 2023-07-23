@@ -112,7 +112,6 @@ public class CartController {
             billProduct = new BillProduct(null, product, bill, o.getQuantity(), product.getPrice());
             billService.saveOrUpdateBill(bill);
             billProductService.saveOrUpdate(billProduct);
-
             Integer quantityProduct = product.getQuantity() - o.getQuantity();
             product.setQuantity(quantityProduct);
             productService.addOrUpdateProduct(product);
@@ -121,4 +120,10 @@ public class CartController {
         model.addAttribute("message",message);
         return "/cart/view-cart";
     }
+
+    @GetMapping("/haha")
+    public String haha(){
+        return "";
+    }
+
 }
