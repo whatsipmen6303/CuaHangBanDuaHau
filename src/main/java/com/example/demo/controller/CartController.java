@@ -120,10 +120,5 @@ public class CartController {
         model.addAttribute("message",message);
         return "/cart/view-cart";
     }
-
-    @GetMapping("/haha")
-    public String haha(){
-        return "";
-    }
-
+    
 }
